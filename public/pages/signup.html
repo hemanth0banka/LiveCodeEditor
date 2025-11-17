@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+    <h1>Sign Up</h1>
+    <form>
+        <div><label for="username"> UserName  </label><input type="text" id="username" name="username"></div>
+        <div><label for="email"> Email  </label><input type="email" id="email" name="email" required></div>
+        <div><label for="mobile"> MobileNo  </label><input type="tel" id="phone" name="phone"></div>
+        <div><label for="password"> Password  </label><input type="password" id="password" name="password" required></div>
+        <div><label for="confirmpassword"> Confirm Password  </label><input type="password" id="confirmpassword"
+            name="confirmpassword"></div>
+        <button type="submit">Sign Up</button>
+    </form>
+    <a href="/pages/login.html">Already an User ? logIn</a>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/js/signup.js"></script>
+
+</html>

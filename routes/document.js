@@ -1,0 +1,11 @@
+const controller = require('../controllers/document.js')
+const express = require('express')
+const route = express.Router()
+route.get('/:id',controller.getContent)
+route.get('/member/:id',controller.member)
+route.post('/reject',controller.reject)
+route.post('/accept',controller.accept)
+route.post('/joinrequest',controller.joinrequest)
+route.post('/save', controller.saveContent)
+route.put('/exit',controller.exit)
+module.exports = route

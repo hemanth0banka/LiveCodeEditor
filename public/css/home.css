@@ -1,0 +1,349 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border: none;
+    padding: none;
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#div1 {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5px;
+    margin-right: 12px;
+    gap: 15px;
+    align-items: center;
+}
+
+#username {
+    margin-top: 13px;
+}
+
+#div2 {
+    margin: 10px;
+    margin-top: 2px;
+    display: flex;
+    flex: 1;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    gap: 30px;
+}
+
+#documents {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+#dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#documents>button {
+    border: 1px solid lightgray;
+    display: flex;
+    background-color: white;
+    box-shadow: 0px 0px 3px lightgray;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 30px;
+}
+
+#dashboard>form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 300px;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+#dashboard>form>div {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 3%;
+    top: 20%;
+    background-color: white;
+    padding: 30px;
+    padding-top: 20px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 10px;
+    width: 20%;
+    max-height: 80%;
+    overflow: auto;
+    gap: 10px;
+}
+
+#menu>div,
+li {
+    font-size: 12px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2px;
+}
+
+#menu>ul {
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 5px;
+}
+
+#menu>ul>li>button {
+    padding: 5px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+#menu>div>button {
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid gray;
+    box-shadow: 0px 0px 15px lightgray;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+input {
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px;
+    width: 30%;
+}
+
+select {
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+#head {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+
+#head>button {
+    margin-right: 10px;
+}
+
+#docname {
+    position: absolute;
+    left: 23%;
+}
+
+#typing {
+    position: absolute;
+    left: 55%;
+    color: rgb(49, 255, 49);
+}
+
+#editor {
+    flex: 1;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+textarea {
+    padding-top: 20px;
+    padding-left: 50px;
+    background-color: rgb(0, 0, 0);
+    font-family: cursive;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#create {
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    left: 2%;
+}
+
+#join {
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: fixed;
+    left: 7%;
+}
+
+#submit {
+    background-color: #0d6efd;
+    color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#cancel {
+    background-color: #ff2138;
+    color: white;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#ai {
+    position: fixed;
+    right: 2%;
+    top: 18%;
+    width: 25%;
+    height: 78%;
+    background: #3f3f3f;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#msg {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    flex: 1;
+    margin-bottom: 10px;
+    gap: 5px;
+    color :white;
+}
+
+#edit {
+    background-color: #dfff29;
+    border: 1px solid lightgray;
+    box-shadow: 0px 0px 3px lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    align-self: center;
+    margin-top: 10%;
+    flex: 1;
+}
+
+#options>button {
+    margin: 5%;
+    margin-bottom: 8%;
+}
+
+button>img {
+    width: 21px;
+    height: 21px;
+}
+
+
+#view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    height: 85%;
+    overflow-y: auto;
+    position: fixed;
+    right: 2%;
+    top: 18.3%;
+    background: rgb(87, 87, 87);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    color: white;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+#ai #messages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-bottom: 60px;
+    overflow: auto;
+}
+
+#my {
+    align-self: flex-end;
+    max-width: 80%;
+    background: white;
+    color: black;
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: 1px solid #dcdcdc;
+}
+
+#you {
+    align-self: flex-start;
+    max-width: 80%;
+    background: #3d3d3d;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+#ask {
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    right: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+
+#ask>input {
+    width: 85%;
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
