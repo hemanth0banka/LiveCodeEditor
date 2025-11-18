@@ -251,7 +251,7 @@ textarea {
     flex: 1;
     margin-bottom: 10px;
     gap: 5px;
-    color :white;
+    color: white;
 }
 
 #edit {
@@ -346,4 +346,22 @@ button>img {
     border-radius: 5px;
     border: none;
     outline: none;
+}
+
+
+#compiler {
+    position: fixed;
+    right: 2%;
+    top: 18%;
+    width: 25%;
+    height: 78%;
+    background: #efefef;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    display: flex;
+    flex-direction: column-reverse;
 }

@@ -8,6 +8,7 @@ let aa
 let auto = false
 let aiTimeout
 
+
 const socket = io('http://localhost:1000/', {
     auth: {
         token: `Bearer ${localStorage.getItem('token')}`
@@ -52,7 +53,7 @@ const editor = (data, type) => {
                 const p = `answer me directly no other words. suggest me next only 2-3 lines for this these along with previous 2-3 lines ${content.value}`
                 let r = await send(p);
                 const aiResponseElement = document.querySelector('#ai #msg');
-                if(aiResponseElement) aiResponseElement.innerHTML = r;
+                if (aiResponseElement) aiResponseElement.innerHTML = r;
             }, 1000)
         }
     });
@@ -104,6 +105,7 @@ function buttons(obj) {
                     err(e)
                 }
             })
+            let run = ''
             const img = document.createElement('img')
             img.src = '/img/chatgpt.gif'
             const ai = document.createElement('button')
@@ -355,6 +357,46 @@ function buttons(obj) {
             const typing = document.createElement('div')
             typing.id = 'typing'
             head.appendChild(typing)
+            if (obj.type === 'javascript') {
+                const run = document.createElement('button')
+                run.id = 'submit'
+                run.innerHTML = 'Run'
+                run.addEventListener('click', async () => {
+                    const old = document.querySelector('#compiler')
+                    if (old) {
+                        document.querySelector('#dashboard').removeChild(old)
+                    }
+                    let compiler = document.createElement('div')
+                    compiler.id = 'compiler'
+                    const close = document.createElement('button')
+                    close.innerHTML = 'close'
+                    close.id = 'cancel'
+                    close.addEventListener('click', () => {
+                        document.querySelector('#dashboard').removeChild(compiler)
+                    })
+                    compiler.appendChild(close)
+                    const space = document.createElement('div')
+                    compiler.appendChild(space)
+                    const fun = (code) => {
+                        try {
+                            console.log = (e) => {
+                                const txt = document.createElement('div')
+                                txt.innerHTML = e
+                                space.appendChild(txt)
+                            }
+                            eval(code)
+                        }
+                        catch (e) {
+                            const txt = document.createElement('div')
+                            txt.innerHTML = e
+                            space.appendChild(txt)
+                        }
+                    }
+                    fun(content.value)
+                    document.querySelector('#dashboard').appendChild(compiler)
+                })
+                head.appendChild(run)
+            }
             head.appendChild(ai)
             head.appendChild(save)
             head.appendChild(download)
