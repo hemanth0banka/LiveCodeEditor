@@ -1,0 +1,91 @@
+# LiveCodeEditor
+
+A full-stack real-time code editor built using Node.js, Express, MongoDB, Socket.io, and Vanilla JavaScript.
+It allows users to create, edit, save, and manage live HTML/CSS/JS projects with instant preview and cloud storage.
+The project also includes authentication, AI support, and user project management.
+
+---
+
+## 🚀 Features
+
+### ⭐ Core Editor
+
+* Live HTML / CSS / JavaScript editor
+* Real-time preview 
+* Project auto-save and manual save
+* File download support
+* Clean and responsive UI
+
+### 👤 Authentication
+
+* User signup & login
+* Forgot-password + reset password
+* JWT-based session authentication
+* Form validation
+
+### 💾 User Projects
+
+* Create new project
+* Save project
+* Load existing user projects
+* Delete project
+
+### 🤖 AI Features
+
+* Ai suggestions (using Gemini API)
+* Integrated directly in the editor
+
+### 🔌 Realtime Features
+
+* Socket.io live communication
+
+---
+
+## 🛠 Tech Stack
+
+Frontend -  HTML, CSS, JavaScript, EJS templates
+Backend  -  Node.js, Express.js
+Database -  MongoDB with Mongoose 
+Realtime -  Socket.io
+Ai       -  Gemini API
+Auth     -  JWT tokens, bcrypt hashing 
+Other    -  Middleware, REST API routes 
+
+---
+
+## ⚙️ Installation & Setup
+
+1️. Clone the repository
+
+` git clone https://github.com/hemanth0banka/LiveCodeEditor.git
+cd LiveCodeEditor `
+
+2️. Install dependencies
+
+` npm install `
+
+3️. Create .env file
+
+Add your environment variables:
+
+`
+MONGO_URI=
+JWT_SECRET=
+OPENAI_API_KEY=
+PORT=3000
+`
+
+4️. Start the server
+
+` node app.js `
+
+5️. Open in browser
+
+` http://localhost:3000 `
+
+---
+
+## ⭐ Support
+
+If you like this project, consider starring the repo ❤️
+
