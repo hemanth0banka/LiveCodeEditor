@@ -35,7 +35,7 @@ const accounDelete = async (req, res, next) => {
             await documents.findByIdAndDelete(x._id)
         }
         for (let x of projects) {
-            const r = await document.findById(x.id)
+            const r = await documents.findById(x.id)
             const arr = []
             for (let y of r.members) {
                 if (y != id) {
@@ -46,7 +46,7 @@ const accounDelete = async (req, res, next) => {
             await r.save()
         }
         for (let x of waitings) {
-            const r = await document.findById(x.id)
+            const r = await documents.findById(x.id)
             const arr = []
             for (let y of r.waiting) {
                 if (y != id) {

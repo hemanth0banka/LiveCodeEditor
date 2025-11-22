@@ -39,7 +39,7 @@ app.use((req, res, next) => {
 app.use(errorHandler);
 (async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/CodeEditor')
+        await mongoose.connect(process.env.MONGO_URI)
         console.log('DataBase Connected ...')
         server.listen(port, () => {
             console.log(`Server Listening at http://localhost:${port}/`)
