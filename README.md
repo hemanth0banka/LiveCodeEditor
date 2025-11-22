@@ -1,7 +1,7 @@
 # LiveCodeEditor
 
 A full-stack real-time code editor built using Node.js, Express, MongoDB, WebSockets, and JavaScript.
-It allows users to create, edit, save, and manage live HTML/CSS/JS projects with instant preview and cloud storage.
+It allows users to create, edit, save, and manage documents with instant preview and cloud storage.
 The project also includes authentication, AI support, and user project management.
 
 ---
