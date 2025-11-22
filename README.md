@@ -12,7 +12,7 @@ The project also includes authentication, AI support, and user project managemen
 
 * Live HTML / CSS / JavaScript editor
 * Real-time preview 
-* Project auto-save and manual save
+* Project save Changes
 * File download support
 * Clean and responsive UI
 
@@ -21,7 +21,6 @@ The project also includes authentication, AI support, and user project managemen
 * User signup & login
 * Forgot-password + reset password
 * JWT-based session authentication
-* Form validation
 
 ### 💾 User Projects
 
@@ -33,7 +32,6 @@ The project also includes authentication, AI support, and user project managemen
 ### 🤖 AI Features
 
 * Ai suggestions (using Gemini API)
-* Integrated directly in the editor
 
 ### 🔌 Realtime Features
 
@@ -43,7 +41,7 @@ The project also includes authentication, AI support, and user project managemen
 
 ## 🛠 Tech Stack
 
-Frontend -  HTML, CSS, JavaScript, EJS templates
+Frontend -  HTML, CSS, JavaScript
 Backend  -  Node.js, Express.js
 Database -  MongoDB with Mongoose 
 Realtime -  Socket.io
@@ -69,10 +67,13 @@ cd LiveCodeEditor `
 Add your environment variables:
 
 `
-MONGO_URI=
-JWT_SECRET=
-OPENAI_API_KEY=
-PORT=3000
+MONGO_URI =
+JWT_SECRET =
+AI_API_KEY =
+PORT = 3000
+SALT = 10
+SIB_SENDER_EMAIL = 
+SIBAPIKEY =
 `
 
 4️. Start the server
