@@ -9,7 +9,7 @@ let auto = false
 let aiTimeout
 
 
-const socket = io('http://localhost:1000/', {
+const socket = io('http://13.200.243.168:1000/', {
     auth: {
         token: `Bearer ${localStorage.getItem('token')}`
     }
@@ -19,7 +19,7 @@ const err = (e) => {
     if (e.response.status === 401) {
         alert(`Session Expried , Relogin `)
         localStorage.removeItem('token')
-        window.location.href = 'http://localhost:1000/'
+        window.location.href = 'http://13.200.243.168:1000/'
     }
     console.log(e)
 }
@@ -443,7 +443,7 @@ window.addEventListener('load', async () => {
         document.querySelector('#username').innerHTML = username
     }
     catch (e) {
-        if (e.status === 401) window.location.href = 'http://localhost:1000/'
+        if (e.status === 401) window.location.href = 'http://13.200.243.168:1000/'
         err(e)
     }
 })
@@ -601,7 +601,7 @@ document.querySelector('#setting').addEventListener('click', () => {
             await axios.post('/user/forgot', { email })
             alert('your password reset link was send to your email')
             localStorage.removeItem('token')
-            window.location.href = 'http://localhost:1000/'
+            window.location.href = 'http://13.200.243.168:1000/'
         }
         catch (e) {
             err(e)
@@ -621,7 +621,7 @@ document.querySelector('#setting').addEventListener('click', () => {
             })
             alert('Account Deleted')
             localStorage.removeItem('token')
-            window.location.href = 'http://localhost:1000/'
+            window.location.href = 'http://13.200.243.168:1000/'
         }
         catch (e) {
             err(e)
@@ -631,7 +631,7 @@ document.querySelector('#setting').addEventListener('click', () => {
     logout.innerHTML = '⏻ LogOut'
     logout.addEventListener('click', () => {
         localStorage.removeItem('token')
-        window.location.href = 'http://localhost:1000/'
+        window.location.href = 'http://13.200.243.168:1000/'
     })
     logout.id = 'edit'
     div.appendChild(forgot)

@@ -12,7 +12,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
             password: event.target.password.value
         })
         alert('Registered Successfully!')
-        window.location.href = 'http://localhost:1000/';
+        window.location.href = 'http://13.200.243.168:1000/';
     }
     catch (e) {
         if(e.status === 400) alert('there is an account with this email')

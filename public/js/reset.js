@@ -7,7 +7,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
             password: event.target.new.value
         })
         alert('password updated')
-        window.location.href = `http://localhost:1000/`;
+        window.location.href = `http://13.200.243.168:1000/`;
     }
     catch (e) {
         console.log(e)
