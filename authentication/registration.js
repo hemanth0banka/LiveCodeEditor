@@ -27,7 +27,7 @@ const forgot = async (email) => {
         const request = await new req({ userUserId: user._id })
         await request.save()
         const id = request._id
-        const link = `http://localhost:1000/user/forgot/${id}`
+        const link = `http://3.108.52.99/user/forgot/${id}`
         const client = Sib.ApiClient.instance;
         const apiKey = client.authentications['api-key'];
         apiKey.apiKey = process.env.SibapiKey;

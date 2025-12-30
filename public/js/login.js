@@ -6,7 +6,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
             password: event.target.password.value
         })
         localStorage.setItem('token', r.data.data)
-        window.location.href = 'http://13.200.243.168:1000/home'
+        window.location.href = 'http://3.108.52.99:1000/home'
     }
     catch (e) {
         console.log(e)
